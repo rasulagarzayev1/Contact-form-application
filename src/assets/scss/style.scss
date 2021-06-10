@@ -1,0 +1,357 @@
+$mainBackgroundColor: #22304f;
+$spesificTextColor: #c03b4b;
+$mainTextColor: #fff;
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+* {
+  font-family: OpenSans;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $mainBackgroundColor;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2%;
+  .container {
+    width: 85%;
+    margin: auto;
+    .wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .addressDetailsPart {
+        width: 40%;
+        color: $mainTextColor;
+        font-size: 1.4em;
+        padding-top: 10%;
+        a {
+          color: $spesificTextColor;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .mediaEnquiries,
+        .careerQuestions {
+          margin-bottom: 10%;
+        }
+
+        .offices {
+          address {
+            font-style: normal;
+            .adr1 {
+              margin-bottom: 6%;
+              display: inline-block;
+              span {
+                letter-spacing: 1px;
+                display: inline-block;
+                padding: 1% 0;
+              }
+            }
+            .adr1,
+            .adr2 {
+              span {
+                letter-spacing: 1px;
+                display: inline-block;
+                padding: 3px 0;
+              }
+            }
+          }
+        }
+      }
+      .formPart {
+        width: 60%;
+        h1 {
+          text-align: left;
+          color: $mainTextColor;
+          margin-top: 0;
+          padding-top: 2%;
+        }
+        form {
+          width: 100%;
+          color: $mainTextColor;
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            display: inline-block;
+            font-size: 1.2em;
+          }
+          input {
+            width: 99%;
+            padding: 2%;
+            padding-right: 0;
+            outline: none;
+            margin-bottom: 3%;
+            display: inline-block;
+            margin-bottom: 0;
+            border: none;
+            line-height: 1.21428571em;
+            padding: 0.67857143em 2.1em 0.67857143em 1em;
+          }
+
+          .errorMessage {
+            color: #f80c28;
+            font-size: 1em;
+          }
+          .ui.selection.dropdown {
+            display: inline-block;
+            border-radius: 0;
+          }
+
+          .personalInfo,
+          .busineessInfo {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .leftForm,
+            .rightForm {
+              width: 45%;
+            }
+            .distanceBalance {
+              width: 10%;
+            }
+          }
+
+          .personalInfo {
+            margin-bottom: 3%;
+          }
+
+          .additionalInfo {
+            width: 100%;
+            textarea {
+              padding: 1%;
+              width: 100%;
+              outline: none;
+              resize: vertical;
+              margin-bottom: 3%;
+            }
+            .additionalPartWrapper {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              .checkBoxPart {
+                width: 90%;
+                label{
+                  margin-bottom: 0;
+                }
+                input {
+                  height: 12px;
+                  width: 20px;
+                  display: inline-block;
+                  margin-right: 4px;
+                }
+                a {
+                  color: $spesificTextColor;
+                  text-decoration: none;
+                  &:hover {
+                    text-decoration: none;
+                  }
+                }
+              }
+              .buttonPart {
+                width: 10%;
+                button {
+                  color: $mainTextColor;
+                  background-color: $spesificTextColor;
+                  border: none;
+                  outline: none;
+                  width: 100%;
+                  padding: 20%;
+                  display: inline-block;
+                  cursor: pointer;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .layout {
+    padding-bottom: 2%;
+    .container {
+      .wrapper {
+        .addressDetailsPart {
+          font-size: 0.7em;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          .mediaEnquiries,
+          .careerQuestions {
+            width: 50%;
+          }
+
+          .offices {
+            width: 100%;
+            display: flex;
+            padding-bottom: 10%;
+
+            address {
+              width: 50%;
+              .adr1 {
+                margin-bottom: 6%;
+              }
+            }
+          }
+        }
+        .formPart {
+          width: 100%;
+          h1 {
+            font-size: 1.4em;
+          }
+          form {
+            label {
+              font-size: 0.7em;
+            }
+            .personalInfo,
+            .busineessInfo {
+              width: 100%;
+              .leftForm,
+              .rightForm {
+                width: 100%;
+              }
+              .distanceBalance {
+                display: none;
+              }
+            }
+
+            .additionalInfo {
+              .additionalPartWrapper {
+                .checkBoxPart {
+                  width: 100%;
+                  input {
+                    width: auto;
+                  }
+                  a {
+                    color: $spesificTextColor;
+                    text-decoration: none;
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                }
+                .buttonPart {
+                  width: 100%;
+                  button {
+                    color: $mainTextColor;
+                    background-color: $spesificTextColor;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    padding: 2%;
+                    display: inline-block;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .layout {
+    padding-bottom: 2%;
+    .container {
+      .wrapper {
+        .addressDetailsPart {
+          font-size: 1.6em;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          .mediaEnquiries,
+          .careerQuestions {
+            width: 50%;
+          }
+
+          .offices {
+            width: 100%;
+            display: flex;
+            padding-bottom: 10%;
+
+            address {
+              width: 50%;
+              .adr1 {
+                margin-bottom: 6%;
+              }
+            }
+          }
+        }
+        .formPart {
+          h1 {
+            font-size: 2.4em;
+          }
+          width: 100%;
+          form {
+            label {
+              font-size: 1.2em;
+            }
+            .personalInfo,
+            .busineessInfo {
+              width: 100%;
+              .leftForm,
+              .rightForm {
+                width: 100%;
+              }
+              .distanceBalance {
+                display: none;
+              }
+            }
+
+            .additionalInfo {
+              .additionalPartWrapper {
+                .checkBoxPart {
+                  width: 100%;
+                  input {
+                    width: auto;
+                  }
+                  a {
+                    color: $spesificTextColor;
+                    text-decoration: none;
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                }
+                .buttonPart {
+                  width: 100%;
+                  button {
+                    color: $mainTextColor;
+                    background-color: $spesificTextColor;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    padding: 2%;
+                    display: inline-block;
+                    cursor: pointer;
+                    font-size: 1.6em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
